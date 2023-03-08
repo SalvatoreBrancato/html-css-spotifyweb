@@ -87,7 +87,7 @@ BOX
     .box-center{
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         width: 55%;
     }
 
