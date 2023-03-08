@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr{
+    color: white;
+}
+
+li{
+    font-size: 12px;
+    padding-bottom: 10px;
+    list-style: none;
+}
+
+/*******************************************************************************
+ID
+*******************************************************************************/
+    
+#nav-bar-left{
+    width: 50px;
+    height: calc(100% - 100px);
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+    
+    #nav-bar-top{
+        width: calc(100% - 50px);
+        background-color: gray;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    #controller-bar{
+        height: 100px;
+        width: 100%;
+        background-color: gray;
+    }
+
+
+
+/*******************************************************************************
+CLASSI
+*******************************************************************************/
+
+.schermo{
+    height: 100vh;
+    position: relative;
+}
+
+/*******************************************************************************
+BOTTON AND ICON
+*******************************************************************************/
+
+.btn-upgrade{
+    padding: 5px 5px;
+    border: 2px solid white;
+    color: white;
+    /* width: 100px; */
+    border-radius: 20px;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+
+.btn-upgrade a{
+    text-decoration: none;
+    color: white;
+}
+
+.fa-spotify{
+    font-size: 40px;
+    color: white;
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+
+.fa-house,
+.fa-magnifying-glass,
+.fa-book-open,
+.fa-circle-down,
+.fa-circle-user{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.fa-square-plus{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.none{
+    color: white;
+    display: none;
+}
+
+/*******************************************************************************
+UTILITY
+*******************************************************************************/
+
+.block{
+    display: block;
+}
+
+/*******************************************************************************
+@MEDIA
+*******************************************************************************/
+
+/* Mobile L */
+
+@media screen and (min-width: 400px){
+    #nav-bar-left{
+        width: 100px;
+    }
+
+    #nav-bar-top{
+        width: calc(100% - 100px);
+    }
+
+    .none{
+        display: contents;
+    }
+
+    .container-icon-top,
+    .container-icon-bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 5px;
+    }
+
+    .logo-description{
+        font-size: 12px;
+    }
+
+    .icon-description{
+        font-size: 10px;
+    }
+
+    .container-icon-middle{
+        padding: 10px 0;
+        line-height: 40px;
+    }
+}
+
