@@ -2,10 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 hr{
     color: white;
+}
+
+ul{
+    line-height: 25px;
 }
 
 li{
@@ -30,7 +35,7 @@ ID
     
     #nav-bar-top{
         width: calc(100% - 50px);
-        background-color: gray;
+        background-color: rgb(23, 23, 23);
         height: 50px;
         position: absolute;
         top: 0;
@@ -40,30 +45,57 @@ ID
     #controller-bar{
         height: 100px;
         width: 100%;
-        background-color: gray;
+        background-color: rgb(57, 57, 57);
         display: flex;
         justify-content: space-between;
+        position: absolute;
+        bottom: 0;
     }
 
-    .box-left{
+    #container-album{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: calc(100% - 100px);
+        height: 20%;
+    }
+
+/*******************************************************************************
+BOX
+*******************************************************************************/
+    
+/* box container album */
+
+.box-top-album{
+    display: flex;
+    padding-top: 60px;
+    /* height: 20%; */
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* box nav bar */
+.box-left{
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        width: 33%;        
+        justify-content:flex-start;
+        width: 20%;  
+        flex: 1;      
     }
 
     .box-center{
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        width: 30%;
+        justify-content: space-evenly;
+        width: 55%;
     }
 
     .box-right{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        width: 30%;
+        width: 20%;
     }
 
 
@@ -75,6 +107,7 @@ CLASSI
 .schermo{
     height: 100vh;
     position: relative;
+    display: flex;
 }
 
 /*******************************************************************************
@@ -113,7 +146,6 @@ BOTTON AND ICON
 .fa-folder,
 .fa-repeat,
 .fa-backward-step,
-.fa-circle-play,
 .fa-forward-step,
 .fa-arrow-rotate-right,
 .fa-bars,
@@ -128,6 +160,12 @@ BOTTON AND ICON
     color: white;
     margin-bottom: 10px;
     font-size: 30px;
+}
+
+.fa-circle-play{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 40px;
 }
 
 .none{
@@ -149,10 +187,13 @@ Immagini
 UTILITY
 *******************************************************************************/
 
-.block{
-    display: block;
+.ml-10{
+    margin-left: 10px;
 }
 
+.ml-20{
+    margin-left: 20px;
+}
 /*******************************************************************************
 @MEDIA
 *******************************************************************************/
@@ -168,7 +209,7 @@ UTILITY
         width: calc(100% - 100px);
     }
 
-    .none{
+    #nav-bar-left .none{
         display: contents;
     }
 
@@ -178,6 +219,7 @@ UTILITY
         flex-direction: column;
         align-items: flex-start;
         padding-left: 5px;
+        line-height: 35px;
     }
 
     .logo-description{
@@ -194,3 +236,8 @@ UTILITY
     }
 }
 
+@media screen and (min-width: 500px) {
+    #controller-bar .none{
+        display: contents;
+    }
+}
