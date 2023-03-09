@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    /* border: 1px dashed white; */
 }
 
 hr{
@@ -11,6 +12,7 @@ hr{
 
 ul{
     line-height: 25px;
+    text-align: left;
 }
 
 li{
@@ -18,6 +20,7 @@ li{
     padding-bottom: 10px;
     list-style: none;
 }
+
 
 /*******************************************************************************
 ID
@@ -41,6 +44,13 @@ ID
         top: 0;
         right: 0;
     }
+
+    #container-album{
+        width: calc(100% - 50px);
+        height: calc(100% - 100px);
+        background-color: rgb(47, 45, 45);
+        overflow: scroll;
+    }
     
     #controller-bar{
         height: 100px;
@@ -52,13 +62,7 @@ ID
         bottom: 0;
     }
 
-    #container-album{
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        width: calc(100% - 100px);
-        height: 20%;
-    }
+    
 
 /*******************************************************************************
 BOX
@@ -69,10 +73,18 @@ BOX
 .box-top-album{
     display: flex;
     padding-top: 60px;
-    /* height: 20%; */
+    height: 20%;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 14px;
+    font-size: 10px;
+    color: white;
+}
+
+
+.box-bottom-album{
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
 }
 
 /* box nav bar */
@@ -87,7 +99,7 @@ BOX
     .box-center{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         width: 55%;
     }
 
@@ -97,6 +109,8 @@ BOX
         justify-content: space-evenly;
         width: 20%;
     }
+
+    
 
 
 
@@ -183,6 +197,10 @@ Immagini
     margin-top: 20px;
 }
 
+.box-bottom-album img{
+    width: calc(95% / 2);
+}
+
 /*******************************************************************************
 UTILITY
 *******************************************************************************/
@@ -193,6 +211,10 @@ UTILITY
 
 .ml-20{
     margin-left: 20px;
+}
+
+.color-wh{
+    color: white;
 }
 /*******************************************************************************
 @MEDIA
@@ -211,6 +233,10 @@ UTILITY
 
     #nav-bar-left .none{
         display: contents;
+    }
+
+    #container-album{
+        width: calc(100% - 100px);
     }
 
     .container-icon-top,
@@ -236,8 +262,21 @@ UTILITY
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
     #controller-bar .none{
         display: contents;
     }
+
+    .box-bottom-album img{
+        width: calc(95% / 4);
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    .box-bottom-album img{
+        width: calc(95% / 6);
+    }
+
 }
