@@ -26,13 +26,13 @@
                 </div>
                 <div>
                     <a href="#">
-                        <i class="fa-solid fa-house"></i>
+                        <i class="pb-10 fa-solid fa-house"></i>
                         <span class="none icon-description">Home</span>
                     </a>
                 </div>
                 <div>
                     <a href="#">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="pb-10 fa-solid fa-magnifying-glass"></i>
                         <span class="none icon-description">Cerca</span>
                     </a>
                 </div>
@@ -77,14 +77,14 @@
             <div class="container-icon-bottom">
                 <div>
                     <a href="#">
-                        <i class="fa-regular fa-circle-down"></i>
+                        <i class="pb-10 fa-regular fa-circle-down"></i>
                         <span class="none icon-description">Istalla app</span>
                     </a>
                 </div>
                 <hr class="none">
                 <div>
                     <a href="#">
-                        <i class="fa-regular fa-circle-user"></i>
+                        <i class="pb-10 fa-regular fa-circle-user"></i>
                         <span class="none icon-description">Jhon Doe</span>
                     </a>
                 </div>
@@ -153,12 +153,16 @@
             </div>
             <div class="box-bottom-album">
                 <div class="card-img">
-                    <img src="./img/radar.jpeg" alt="">
+                    <div class="box-card-img">
+                        <img src="./img/radar.jpeg" alt="">
+                    </div>
                     <h3>A cure for wellness</h3>
                     <span>Subtitle</span>  
                 </div>             
                 <div class="card-img">
-                    <img src="./img/mixdaily.jpeg" alt="">
+                    <div class="box-card-img">
+                        <img src="./img/mixdaily.jpeg" alt="">
+                    </div>
                     <h3>Sinister</h3>
                     <span>Subtitle</span>
                 </div>
@@ -200,35 +204,50 @@
             </div>
 
             <!-- center -->
-            <div class="box-center">
-                <a href="#">
-                    <i class="fa-solid fa-repeat none"></i>
-                </a>       
-                <a href="#">
-                    <i class="fa-solid fa-backward-step"></i>
-                </a>
-                <i class="fa-regular fa-circle-play"></i>
-                <a href="#">
-                    <i class="fa-solid fa-forward-step"></i>
-                </a>             
-                <a href="#">
-                    <i class="fa-solid fa-arrow-rotate-right none"></i> 
-                </a>                
+
+            <div id="container-nav-bar-center">
+                <div class="box-center">
+                    <a class="margin-0-25" href="#">
+                        <i class="fa-solid fa-repeat none"></i>
+                    </a>       
+                    <a class="margin-0-25" href="#">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </a>
+                    <i class="margin-0-20 fa-regular fa-circle-play"></i>
+                    <a class="margin-0-25" href="#">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </a>             
+                    <a class="margin-0-25" href="#">
+                        <i class="fa-solid fa-arrow-rotate-right none"></i> 
+                    </a>                
+                </div>
+                <div class="box-time-song">
+                    <span class="color-wh mr-10 none">1.20</span>
+                    <div class="time-long">
+                        <div class="time-short"></div>
+                        <div class="time-cursor"></div>
+                    </div>
+                    <span class="none color-wh ml-10">3.55</span>
+                </div>
             </div>
 
             <!-- right -->
             <div class="box-right">
-            <a href="#">
-                <i class="fa-solid fa-bars none"></i>
-            </a>
-                            
-            <a href="#">
-                <i class="fa-solid fa-display none"></i>
-            </a> 
-            <a href="#">
-                <i class="fa-solid fa-volume-high"></i>
-            </a>      
-                
+                <a href="#">
+                    <i class="fa-solid fa-bars"></i>
+                </a>                                
+                <a href="#">
+                    <i class="margin-0-15 fa-solid fa-display none"></i>
+                </a> 
+                <a href="#">
+                    <i class="fa-solid fa-volume-high none"></i>
+                </a>      
+                <div class="box-volume-song">
+                    <div class="volume-long none">
+                        <div class="volume-short"></div>
+                        <div class="time-cursor"></div>
+                    </div>
+                </div>
             </div>
 
         </div>
