@@ -21,6 +21,19 @@ li{
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a:hover{
+    color: rgba(255, 255, 255, 1.0);
+    /* text-decoration:underline wavy greenyellow 3px; */
+    border-left: 2px solid rgb(65, 217, 0);
+    padding-left: 3px;
+    
+}
+
 
 /*******************************************************************************
 ID
@@ -49,7 +62,7 @@ ID
         width: calc(100% - 50px);
         height: calc(100% - 100px);
         background-color: rgb(47, 45, 45);
-        overflow: scroll;
+        overflow-y: auto;
     }
 
     
@@ -68,9 +81,15 @@ ID
 /*******************************************************************************
 BOX
 *******************************************************************************/
-    
-/* box container album */
+/* box nav bar left */
+.box-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
 
+/* box container album */
 .box-top-album{
     display: flex;
     padding-top: 60px;
@@ -82,21 +101,55 @@ BOX
 }
 
 
-.box-bottom-album{
-    /* background-color: red; */
-    /* height: 100%; */
-    width: 100%;
+.box-bottom-album{    
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     text-align: center;
     color: white;
     font-size: 12px;
     padding: 1rem 0;
-    gap: 10px;
+    gap: 2%;
+}
+
+.box-card-img{
+    position: relative;
+}
+
+.box-card-img:after{
+    content: "/f144";
+    font-family: "Font Awesome 6 free";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: 0.0;
+    transition: all 0.3s ;
+}
+
+.card-img:hover .box-card-img:after{
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.box-card-img:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ;
+}
+
+.card-img:hover .box-card-img:before{
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 /* box nav bar */
-.box-left{
+    .box-left{
         display: flex;
         align-items: center;
         justify-content:flex-start;
@@ -132,6 +185,8 @@ CLASSI
     display: flex;
 }
 
+
+
 /*******************************************************************************
 BOTTON AND ICON
 *******************************************************************************/
@@ -139,7 +194,6 @@ BOTTON AND ICON
 .btn-upgrade{
     padding: 5px 5px;
     border: 2px solid white;
-    color: white;
     font-size: 14px;
     border-radius: 20px;
     position: absolute;
@@ -147,15 +201,15 @@ BOTTON AND ICON
     top: 10px;
 }
 
-.btn-upgrade a{
+.btn-upgrade a:hover{
     text-decoration: none;
     color: white;
+    border: none;
 }
 
 .fa-spotify{
     font-size: 40px;
-    color: white;
-    margin-top: 25px;
+    color: rgb(65, 217, 0);
     padding-bottom: 10px;
 }
 
@@ -173,13 +227,14 @@ BOTTON AND ICON
 .fa-bars,
 .fa-display,
 .fa-volume-high{
-    color: white;
+    /* color: white; */
     padding-bottom: 10px;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .fa-square-plus{
-    color: white;
+    /* color: white; */
     margin-bottom: 10px;
     font-size: 30px;
 }
@@ -191,7 +246,7 @@ BOTTON AND ICON
 }
 
 .none{
-    color: white;
+    /* color: white; */
     display: none;
 }
 
@@ -235,6 +290,10 @@ UTILITY
     margin-left: 20px;
 }
 
+.pb-10{
+    padding-bottom: 10px;
+}
+
 .color-wh{
     color: white;
 }
@@ -259,11 +318,15 @@ UTILITY
 
 @media screen and (min-width: 400px){
     #nav-bar-left{
-        width: 100px;
+        width: 150px;
     }
 
     #nav-bar-top{
-        width: calc(100% - 100px);
+        width: calc(100% - 150px);
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
     }
 
     #nav-bar-left .none{
@@ -271,7 +334,7 @@ UTILITY
     }
 
     #container-album{
-        width: calc(100% - 100px);
+        width: calc(100% - 150px);
     }
 
     .container-icon-top,
@@ -284,7 +347,9 @@ UTILITY
     }
 
     .logo-description{
-        font-size: 14px;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(65, 217, 0);
     }
 
     .icon-description{
@@ -295,23 +360,37 @@ UTILITY
         padding: 10px 0;
         line-height: 40px;
     }
+
+    
 }
 
+/* Tablet */
 @media screen and (min-width: 600px) {
     #controller-bar .none{
         display: contents;
     }
 
+    .box-bottom-album{
+        gap: calc(10% / 3);
+    }
+
     .box-bottom-album .card-img{
-        width: calc(95% / 4);
+        width: calc(90% / 4);
+        
     }
 
 }
 
+/* Desktop */
 @media screen and (min-width: 900px) {
+
+    .box-bottom-album{
+        gap: calc(10% / 5);
+    }
 
     .box-bottom-album .card-img{
         width: calc(90% / 6);
+        
     }
 
 }
